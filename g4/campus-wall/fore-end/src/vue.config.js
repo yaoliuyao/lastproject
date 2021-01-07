@@ -1,6 +1,6 @@
 module.exports = {
-    outputDir: "../server/web",
-    publicPath: "/myblog",
+    outputDir: "../back-end/web",
+    publicPath: "/campus_wall",
     devServer: {
         port: 8080,
         proxy: {
@@ -10,7 +10,7 @@ module.exports = {
             "/api": {
                 target: "http://localhost",
                 pathRewrite: {
-                    "/api": "/myblog"
+                    "/api": "/campus_wall"
                 },
                 changeOrigin: true
             }
