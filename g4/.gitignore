@@ -1,7 +1,7 @@
 # 文件夹
 out/
 fore-end/node_modules
-back-end/web/WEB-INF
+../back-end/web/WEB-INF
 .DS_Store
 /dist
 .idea
