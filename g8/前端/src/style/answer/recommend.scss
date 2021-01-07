@@ -1,0 +1,87 @@
+@mixin bg {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+}
+
+.bg {
+  @include bg;
+}
+.recommend {
+  padding: 60px 20px 0;
+  &:last-child {
+    margin-bottom: 50px;
+  }
+  .content {
+    padding: 15px 0;
+    border-bottom: 1px solid #f6f6f6;
+    .look {
+      box-sizing: border-box;
+      margin: 0 0 12px;
+      min-width: 0;
+      color: rgb(133, 144, 166);
+      -webkit-box-align: center;
+      align-items: center;
+      display: flex;
+      font-size: 15px;
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+    }
+    .text {
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        a {
+          cursor: pointer;
+          &:hover {
+            color: #175199;
+          }
+        }
+      }
+    }
+  }
+}
+.recbtn {
+  box-sizing: border-box;
+  margin: 15px 0 0;
+  min-width: 0;
+  display: flex;
+  .write {
+    width: 96px;
+    height: 28px;
+    line-height: 26px;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0;
+    background-color: #0084ff;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    i {
+      margin-right: 5px;
+    }
+  }
+  .count {
+    color: #8590a6;
+    font-size: 14px;
+    line-height: 28px;
+    margin-left: 20px;
+  }
+}
+.close {
+  float: right;
+  display: none;
+  font-size: 20px;
+  color: #8590a6;
+  &:hover {
+    color: #0084ff;
+  }
+}
+.recommend:hover .close {
+  display: block;
+}
+
+

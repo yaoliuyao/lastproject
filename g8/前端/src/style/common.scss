@@ -1,0 +1,79 @@
+// 公共样式
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$bg: #f6f6f6;
+$button-color: #8590a6;
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+  font-size: 15px;
+  color: #121212;
+  background: $bg;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #121212;
+  text-decoration: none;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.clear:after, .clear:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@mixin button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin index_main {
+  margin: 10px 10px 0 0;
+  width: 694px;
+  display: inline-block;
+  margin-top:20px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+@mixin index_nav {
+  display: block;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f2f7;
+  box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+}
+@mixin index_nav2 {
+
+
+ 
+  box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+}
+// 动画
+@mixin animate($translate: translateY(20px)) {
+  .v-enter-active {
+    transition: all .3s ease;
+  }
+  .v-leave-active {
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .v-enter, .v-leave-to {
+    transform: $translate;
+    opacity: 0;
+  }
+}
