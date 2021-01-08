@@ -1,0 +1,83 @@
+.below-text{
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.HotItem{
+  background: #fff;
+  display: flex;
+  padding: 16px 16px 16px 0;
+  box-shadow: 0 1px 3px rgba(18,18,18,.1);
+  position: relative;
+}
+.HotIndex{
+  font-size: 20px;
+  color: #8590a6;
+  font-weight: 600;
+  text-align: center;
+  width: 57px;
+  padding-top: 1px;
+  &.origin {
+    color: #ff9607;
+  }
+}
+.HotIndex-new {
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  height: 19px;
+  line-height: 19px;
+  margin: 0 auto;
+  width: 19px;
+  background: #ff9607;
+}
+.HotItem-content{
+  flex: 1 1;
+  overflow: hidden;
+  min-height: 100px;
+  .HotItem-content-text{
+    h2 {
+      color: #121212;
+      font-size: 18px;
+      line-height: 28px;
+      max-height: 56px;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      font-weight: 600;
+    }
+    p {
+      color: #444;
+      line-height: 25px;
+      margin-top: 2px;
+      min-height: 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+.HotItem-content-btn {
+  bottom: 16px;
+  position: absolute;
+  margin-top: 8px;
+    i {
+      color: #8590a6;
+      padding-right: 40px;
+    }
+}
+.HotItem-content-img {
+  display: block;
+  height: 105px;
+  margin-left: 16px;
+  position: relative;
+    img {
+      border-radius: 4px;
+      height: 105px;
+      width: 190px;
+      object-fit: cover;
+      display: block;
+    }
+}
+
