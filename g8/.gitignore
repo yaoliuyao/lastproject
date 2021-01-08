@@ -3,6 +3,11 @@ node_modules
 /dist
 out
 
+# sql server
+*.sql
+
+# xml
+*.iml
 #image
 *.jpg
 *.jpeg
