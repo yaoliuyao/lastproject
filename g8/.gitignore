@@ -8,6 +8,8 @@ out
 
 # xml
 *.iml
+*.xml
+
 #image
 *.jpg
 *.jpeg
