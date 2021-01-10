@@ -65,6 +65,13 @@
                         <el-menu-item index="/home/order/list">
                             <span>订单列表</span>
                         </el-menu-item>
+
+                    </el-submenu>
+                    <el-submenu index="4">
+                        <template slot="title">
+                            <i class="el-icon-notebook-2"></i>
+                            <span>数据统计</span>
+                        </template>
                         <el-menu-item index="/home/order/total">
                             <span>订单汇总</span>
                         </el-menu-item>
