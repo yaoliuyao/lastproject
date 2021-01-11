@@ -1,0 +1,65 @@
+{
+  "id": "2236808",
+  "name": "fonts",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "46392",
+      "name": "order_search",
+      "font_class": "ordersearch",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "17908143",
+      "name": "Delete",
+      "font_class": "Delete",
+      "unicode": "e848",
+      "unicode_decimal": 59464
+    },
+    {
+      "icon_id": "1160174",
+      "name": "order-s",
+      "font_class": "orders",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "1010160",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "606294",
+      "name": "注销",
+      "font_class": "zhuxiaologout11",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "447546",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "7876854",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11219362",
+      "name": "password",
+      "font_class": "password",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    }
+  ]
+}
