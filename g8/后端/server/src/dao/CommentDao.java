@@ -53,6 +53,4 @@ public class CommentDao {
             DbUtils.closeQuietly(conn);
         }
     }
-
-    //
 }
