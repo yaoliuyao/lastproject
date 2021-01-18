@@ -31,11 +31,6 @@ export default {
                     pic:'../img/login.png'
                     
                 },
-                {
-                    title:'幸存者',
-                    artist: '林俊杰',
-                    src: '../mp3/幸存者 - 林俊杰.mp3',
-                },
             
             ],
         }

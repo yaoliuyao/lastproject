@@ -4,7 +4,7 @@
             <h2 style="padding-left:30px;" v-show="bool!='false'">热门歌单</h2>
         <el-row >
   <el-col :span="10" class="songmax"><div class="grid-content bg-purple">
-      <img src="../img/songlist1.jpg" alt="" width="100%" height="200px"></div></el-col>
+      <img src="../img/songlist1.jpg" alt="" width="100%" height="200px" @click="$router.push('/songsheet')"></div></el-col>
   <el-col :span="4" class="songmax2"><div class="grid-content bg-purple"> <img src="../img/songlist1.jpg" alt="" width="100%" height="100%"><span>把千疮百孔的那个自我收拢起来，淡定地露出招牌式的酒窝，说：大家好，我是林俊杰。</span></div></el-col>
   <el-col :span="4" class="songmax2"><div class="grid-content bg-purple"> <img src="../img/songlist1.jpg" alt="" width="100%" height="100%"></div></el-col>
   <el-col :span="4" class="songmax2"><div class="grid-content bg-purple"> <img src="../img/songlist1.jpg" alt="" width="100%" height="100%"></div></el-col>
