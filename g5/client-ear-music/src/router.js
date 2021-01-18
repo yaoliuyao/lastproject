@@ -6,9 +6,11 @@ import icon4 from './components/combination/conformity4';
 import ss2 from './components/ss2';
 import my from './components/mymusic';
 import musician from './components/musician'
+import songsheet from './components/song-sheet.vue'
 
 export default new VueRouter({
     routes: [
+
         //每日推荐
         {
             path: "/con", component: con,
@@ -36,6 +38,14 @@ export default new VueRouter({
             name: 'music-conformity4',
             components:{
                 icon3:icon4,
+            }
+        },
+        //热门歌单
+        {
+            path: "/songsheet",
+            name: 'sheet',
+            components:{
+                songsheet:songsheet,
             }
         },
        
