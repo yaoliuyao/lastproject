@@ -17,9 +17,19 @@
                 </el-carousel-item>
               </el-carousel>
             </div>
-            <div class="hotsong">
+            <div class="News">
               <!--热歌right-->
-              x
+              <span class="new"><b>音乐快讯</b></span>
+              <hr>
+              <table>
+              <tr><div class="News2">朱主爱《蒙面唱将》掀高糖风暴 惊人柔韧度震撼全场</div><hr></tr>
+              <tr><div class="News2">因为有你！五月天《因为你 所以我》创下多项好成绩</div><hr></tr>
+              <tr><div class="News2">等什么君邓寓君新歌上线 江湖策马侠女风范</div><hr></tr>
+              <tr><div class="News2">张碧晨第二张专辑收官曲《逢生》首发 双跨年首秀开唱</div><hr></tr>
+
+              </table>
+
+
             </div>
             <div class="singer">
               <!--歌手-->
@@ -281,12 +291,25 @@ export default {
   outline: none;
   background-color: #f1f3f4;
 }
-.hotsong {
+.News {
   width: 189px;
   height: 220px;
   border: solid darkblue 1px;
   margin-left: 560px;
+  text-align: center;
+
 }
+.News2{ 
+  width: 190px;
+  white-space:nowrap;
+text-overflow:ellipsis;
+-o-text-overflow:ellipsis;
+overflow: hidden;
+font-size: 14px;
+  font-size: 12px;
+
+}
+
 .singer {
   width: 700px;
   height: 100px;
