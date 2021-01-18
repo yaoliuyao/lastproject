@@ -1,0 +1,23 @@
+package web;
+
+import bean.Region;
+import dao.RegionDao;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/AddRegionServlet")
+public class AddRegionServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String region = request.getParameter("region");
+        try {
+            new RegionDao().addregion(new Region(region));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
