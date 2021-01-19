@@ -4,10 +4,6 @@ import java.util.Date;
 
 public class FanKui {
 
-<<<<<<< HEAD
-    private int fkid;
-=======
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
     private int id;
     private String name;
     private String tp;
@@ -18,12 +14,8 @@ public class FanKui {
     public FanKui() {
     }
 
-<<<<<<< HEAD
-    public FanKui(int fkid, int id, String name, String tp, String fk, Date time, int sf) {
-        this.fkid = fkid;
-=======
+
     public FanKui(int id, String name, String tp, String fk, Date time, int sf) {
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
         this.id = id;
         this.name = name;
         this.tp = tp;
@@ -32,17 +24,7 @@ public class FanKui {
         this.sf = sf;
     }
 
-<<<<<<< HEAD
-    public int getFkid() {
-        return fkid;
-    }
 
-    public void setFkid(int fkid) {
-        this.fkid = fkid;
-    }
-
-=======
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
     public int getId() {
         return id;
     }

@@ -19,11 +19,7 @@ public class Yonhuindex extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession session = req.getSession();
-<<<<<<< HEAD
-        YonHu yonHu = (YonHu) session.getAttribute("sess2");
-=======
         YonHu yonHu = (YonHu) session.getAttribute("sess");
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 
         if(yonHu!=null){
             PrintWriter writer = resp.getWriter();

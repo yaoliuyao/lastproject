@@ -4,10 +4,7 @@ import mv.utils.DBHelper;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-<<<<<<< HEAD
-import java.util.Date;
-=======
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
+
 
 public class GuanAddDao {
 
@@ -66,21 +63,4 @@ public class GuanAddDao {
     }
 
 
-<<<<<<< HEAD
-    public int addjg(int id, String pl, String time) throws Exception {
-        String sql = "insert into jiangao(id, mComment, mtime) values(?,?,?)";
-        try (Connection connection = DBHelper.getConnection();
-             PreparedStatement pr = connection.prepareStatement(sql)){
-            pr.setInt(1, id);
-            pr.setString(2, pl);
-            pr.setString(3, time);
-
-            int c = pr.executeUpdate();
-            return c;
-        }
-    }
-
-
-=======
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 }

@@ -10,8 +10,6 @@ public class EncodingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-<<<<<<< HEAD
-=======
 //        HttpServletResponse resp = (HttpServletResponse) response;
 //        //当**Credentials为true时，**Origin不能为星号，需为具体的ip地址【如果接口不带cookie,**Origin无需设成具体ip】
 //        resp.setHeader("Access-Control-Allow-Origin", "http://IPv4:端口");
@@ -19,7 +17,6 @@ public class EncodingFilter implements Filter {
 //        resp.setHeader("Access-Control-Allow-Methods", "GET,POST,PATCH,PUT,OPTIONS,DELETE");
 //        resp.setHeader("Access-Control-Allow-Headers", "Origin,Content-Type,Cookie,Accept,Token");
 
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
 

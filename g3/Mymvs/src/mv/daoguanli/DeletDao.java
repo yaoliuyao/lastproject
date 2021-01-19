@@ -58,17 +58,5 @@ public class DeletDao {
         }
     }
 
-<<<<<<< HEAD
-    public void deletewgpl(String id) throws Exception {
-        Connection conn = DBHelper.getConnection();
-        String sql = "delete from misicComment where mcid = ?";
-        try {
-            new QueryRunner().update(conn, sql, id);
-        } finally {
-            DbUtils.closeQuietly(conn);
-        }
-    }
 
-=======
->>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 }
