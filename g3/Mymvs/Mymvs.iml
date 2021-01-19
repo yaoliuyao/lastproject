@@ -20,6 +20,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.57" level="application_server_libraries" />
+<<<<<<< HEAD
     <orderEntry type="library" name="mymvs" level="project" />
+=======
+    <orderEntry type="library" name="mylib" level="project" />
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
   </component>
 </module>

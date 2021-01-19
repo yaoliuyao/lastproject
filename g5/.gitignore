@@ -9,6 +9,9 @@ node_modules
 *.jpg
 *.png
 *.jpeg
+*.mp3
+*.mp4
+*.jar
 
 # local env files
 .env.local

@@ -1,12 +1,17 @@
 package mv.daoyonhu;
 
 import mv.beanguanli.GuanLy;
+<<<<<<< HEAD
 import mv.beanyonhu.Jingao;
 import mv.beanyonhu.YonHu;
 import mv.utils.DBHelper;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
+=======
+import mv.beanyonhu.YonHu;
+import mv.utils.DBHelper;
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -75,6 +80,7 @@ public class YonhuDao {
     }
 
 
+<<<<<<< HEAD
     public Jingao cxjg(int id) throws Exception {
         String sql = "select * from jiangao where id = ? and sf = 0 order by jgid desc";
         try (Connection connection = DBHelper.getConnection();
@@ -127,4 +133,6 @@ public class YonhuDao {
     }
 
 
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./有.svg">
+    <title>有问必答</title>
+    <style>
+      #AppLoading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      .ball-beat > div {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #279fcf;
+        margin: 5px;
+        display: inline-block;
+        animation-fill-mode: both;
+        animation: ball-beat 0.7s 0s infinite linear;
+      }
+      .ball-beat > div:nth-child(2n-1) {
+        animation-delay: .35s;
+      }
+      @keyframes ball-beat {
+        50% {
+          opacity: 0.2;
+          transform: scale(0.75);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="AppLoading">
+      <div class="ball-beat">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="app"></div>
+<!--     built files will be auto injected -->
+  </body>
+</html>

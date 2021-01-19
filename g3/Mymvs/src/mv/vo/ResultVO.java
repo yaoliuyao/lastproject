@@ -1,7 +1,10 @@
 package mv.vo;
 
 import com.google.gson.Gson;
+<<<<<<< HEAD
 import com.google.gson.GsonBuilder;
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,10 +19,14 @@ public class ResultVO {
     private ResultVO() {}
 
     public String toJSON () {
+<<<<<<< HEAD
 //        Gson gson = new Gson();
         Gson gson = new GsonBuilder()
                 .setDateFormat("yyyy-MM-dd")
                 .create();
+=======
+        Gson gson = new Gson();
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
         return gson.toJson(this);
     }
 

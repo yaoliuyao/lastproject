@@ -16,6 +16,7 @@ public class Pinlunyy {
     public Pinlunyy() {
     }
 
+<<<<<<< HEAD
     public Pinlunyy(int mcid, int mid, String mComment, Date mtime, int yhid, int mclike, String yhname, String yhtx) {
         this.mcid = mcid;
         this.mid = mid;
@@ -27,6 +28,8 @@ public class Pinlunyy {
         this.yhtx = yhtx;
     }
 
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
     public int getMcid() {
         return mcid;
     }

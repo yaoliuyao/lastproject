@@ -16,6 +16,7 @@ public class Pinlunsp {
     public Pinlunsp() {
     }
 
+<<<<<<< HEAD
     public Pinlunsp(int vcid, int vid, String vComment, Date vtime, int yhid, int vclike, String yhname, String yhtx) {
         this.vcid = vcid;
         this.vid = vid;
@@ -27,6 +28,8 @@ public class Pinlunsp {
         this.yhtx = yhtx;
     }
 
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
     public int getVcid() {
         return vcid;
     }

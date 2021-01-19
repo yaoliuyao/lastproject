@@ -2,8 +2,11 @@ package mv.daoguanli;
 
 import mv.beanguanli.GuanLy;
 import mv.utils.DBHelper;
+<<<<<<< HEAD
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -64,6 +67,7 @@ public class GuanDao {
     }
 
 
+<<<<<<< HEAD
     public void jiechufenhao(int id) throws Exception {
         Connection conn = DBHelper.getConnection();
         String sql = "update yonhu set viptime1 = 1 where id = ?";
@@ -75,5 +79,7 @@ public class GuanDao {
     }
 
 
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 
 }

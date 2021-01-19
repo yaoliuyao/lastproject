@@ -4,10 +4,12 @@
     <!--导航栏-->
     <router-view name="my"> </router-view> 
      <router-view name="musician"> </router-view> 
+     <router-view name="songsheet"> </router-view> 
     <!--max轮播图-->
     <div class="banner" 
    v-show="$route.name!=='my'
-    && $route.name!=='musician'">
+    && $route.name!=='musician'
+    && $route.name!=='sheet'">
       <ear-banner></ear-banner>
     </div>
     <router-view></router-view >
@@ -18,8 +20,9 @@
     && $route.name!=='music-conformity2'
     && $route.name!=='music-conformity3'
     && $route.name!=='music-conformity4'
-     && $route.name!=='my'
-      && $route.name!=='musician'
+    && $route.name!=='my'
+    && $route.name!=='musician'
+    && $route.name!=='sheet'
     ">
       <el-col :span="3"><div class="grid-content bg-purple">x</div></el-col>
       <el-col :span="18"

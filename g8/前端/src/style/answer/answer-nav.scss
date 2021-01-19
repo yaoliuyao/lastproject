@@ -1,0 +1,39 @@
+.main {
+  @include index_main;
+  .nav {
+    @include index_nav;
+    .nav-btn {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      margin: 15px 0 0 20px;
+      color: #444;
+      padding: 0 10px;
+      background: rgba(133,144,166,.12);
+      border-radius: 20px;
+      cursor: pointer;
+      &.nav_active, &:hover {
+        color: #0084ff;
+        background: aliceblue;
+      }
+      i {
+        font-size: 18px;
+        padding: 0 5px;
+      }
+    }
+  }
+}
+.Fixed {
+  position: fixed;
+  width: 694px;
+  z-index: 10;
+}
+.fix {
+  background: #f6f6f6;
+  left: -3px;
+  height: 78px;
+  position: absolute;
+  bottom: 0;
+  width: 700px;
+  z-index: -1;
+}

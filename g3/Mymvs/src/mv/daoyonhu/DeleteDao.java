@@ -48,6 +48,7 @@ public class DeleteDao {
         }
     }
 
+<<<<<<< HEAD
     public void yhdeleteyypl(String mcid,String yhid) throws Exception {
         Connection conn = DBHelper.getConnection();
         String sql = "delete from misicComment where mcid = ? and yhid = ?";
@@ -76,4 +77,6 @@ public class DeleteDao {
         }
     }
 
+=======
+>>>>>>> 2ec084e9a0b293423f95b1df3e408fab5b918afa
 }
