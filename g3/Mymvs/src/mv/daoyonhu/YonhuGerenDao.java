@@ -63,6 +63,7 @@ public class YonhuGerenDao {
                     String mlx = resultSet.getString(8);
 
                     YinYue yy = new YinYue(mid, mname, mauthor, mtp, mlike, mvip, mlx);
+
                     yinYues.add(yy);
                 }
                 return yinYues;
@@ -199,7 +200,6 @@ public class YonhuGerenDao {
         }
 
     }
-
 
 
 

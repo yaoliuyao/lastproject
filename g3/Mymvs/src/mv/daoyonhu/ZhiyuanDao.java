@@ -114,12 +114,12 @@ public class ZhiyuanDao {
         }
     }
 
-
     public int dzyy(int mid) throws Exception {
         Connection conn = DBHelper.getConnection();
         try {
             String sql = "update misic set mlike = mlike + 1 where mid = ?";
             return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),mid);
+
         } finally {
             DbUtils.closeQuietly(conn);
         }
@@ -130,6 +130,7 @@ public class ZhiyuanDao {
         try {
             String sql = "update video set vlike = vlike + 1 where vid = ?";
             return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),vid);
+
         } finally {
             DbUtils.closeQuietly(conn);
         }
@@ -140,6 +141,7 @@ public class ZhiyuanDao {
         try {
             String sql = "update player set plike = plike + 1 where pid = ?";
             return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),pid);
+
         } finally {
             DbUtils.closeQuietly(conn);
         }
@@ -150,6 +152,7 @@ public class ZhiyuanDao {
         try {
             String sql = "update misicComment set mclike = mclike + 1 where mcid = ?";
             return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),mcid);
+
         } finally {
             DbUtils.closeQuietly(conn);
         }
@@ -159,6 +162,7 @@ public class ZhiyuanDao {
         try {
             String sql = "update videoComment set vclike = vclike + 1 where vcid = ?";
             return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),vcid);
+
         } finally {
             DbUtils.closeQuietly(conn);
         }

@@ -8,6 +8,7 @@ public class Huifu {
     public Huifu() {
     }
 
+
     public Huifu(int id, String hf) {
         this.id = id;
         this.hf = hf;

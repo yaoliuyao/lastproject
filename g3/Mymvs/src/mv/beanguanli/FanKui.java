@@ -14,6 +14,7 @@ public class FanKui {
     public FanKui() {
     }
 
+
     public FanKui(int id, String name, String tp, String fk, Date time, int sf) {
         this.id = id;
         this.name = name;
@@ -22,6 +23,7 @@ public class FanKui {
         this.time = time;
         this.sf = sf;
     }
+
 
     public int getId() {
         return id;
