@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <template v-if="isfo">
+        <h4>欢迎您</h4>
+        <h1>{{name.gname}}</h1>
+        <h1>{{name.gtp}}</h1>
+    </template>
+
+    <template v-else>
+        <p>请您 <a href="#" >登录</a></p>
+    </template>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            name: {},
+            isfo: false
+        },
+        methods: {
+            doLogin() {
+                axios({
+                    url: "pd"
+                }).then(resp =>{
+                    console.log(resp);
+                    console.log(resp.data.data);
+                    this.name = resp.data.data;
+                    this.isfo = true
+                });
+            },
+
+        },
+        created() {
+            this.doLogin();
+        }
+    });
+</script>
+
+</body>
+</html>

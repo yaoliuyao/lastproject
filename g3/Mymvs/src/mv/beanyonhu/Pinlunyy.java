@@ -16,6 +16,17 @@ public class Pinlunyy {
     public Pinlunyy() {
     }
 
+    public Pinlunyy(int mcid, int mid, String mComment, Date mtime, int yhid, int mclike, String yhname, String yhtx) {
+        this.mcid = mcid;
+        this.mid = mid;
+        this.mComment = mComment;
+        this.mtime = mtime;
+        this.yhid = yhid;
+        this.mclike = mclike;
+        this.yhname = yhname;
+        this.yhtx = yhtx;
+    }
+
     public int getMcid() {
         return mcid;
     }

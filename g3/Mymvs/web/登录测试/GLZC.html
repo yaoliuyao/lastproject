@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style type="text/css">
+        body{
+            background-image: url(tp/banner_pc.jpg);
+            background-size: 1100px 660px;
+        }
+        #logo{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            /* border: 1px solid red; */
+            width: 240px;
+        }
+        #logo img{
+            border-radius: 15px;
+        }
+        #zi{
+            /*border: 1px solid red;*/
+            width: 450px;
+            height: 260px;
+            margin-top: 240px;
+            margin-left: 140px;
+        }
+        #zi h1{
+            margin-left:50px;
+            color: white;
+            font-size: 43px;
+            opacity: 0.7;
+        }
+        #zi p{
+            color: white;
+            font-size: 27px;
+            margin-left:140px;
+        }
+        #zi p:hover{
+
+        }
+        #dl{
+            background-color: #dfdfdf;
+            opacity: 0.8px;
+            border: 1px solid gray;
+            width: 330px;
+            height: 390px;
+            position: fixed;
+            right: 300px;
+            top: 120px;
+            border-radius: 18px;
+
+            transition: right 0.8s;
+            -webkit-transition: right 0.8s;
+        }
+        #dl:hover{
+            right: 320px;
+        }
+        a{
+            color: #6f95c8;
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .in{
+            border: 1px solid skyblue;
+            border-radius: 12px;
+        }
+        .in:hover{
+            border: 1px solid #409AF8;
+            border-radius: 12px;
+        }
+        #an{                                     /* 按钮 */
+            border-radius: 10px;
+        }
+        #an:hover{
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div id="zhuti">
+
+    <div id="logo">
+        <img src="tp/timg.jpg" width="130" height="130"  style="box-shadow: 5px 5px 10px white">
+    </div>
+
+    <div id="zi">
+        <h1>引领市场 安全管理</h1>
+        <p>欢迎注册</p>
+    </div>
+
+    <div id="dl">
+        <p style="margin-left: 115px;">登记信息</p>
+        <hr >
+
+        <form :model="form">
+            <img style="width: 70px;height: 70px;margin-left: 120px" id="tu3" src="" title="请选择图片..." @click="$refs.x.click()" :src="previewSrc">
+            <input style="display: none;" id="wj2" type="file" accept=".jpg, .gif" ref="x" @change="filePick">
+
+            <input type="text" name="name" class="in" placeholder="  请输入用户名" v-model="form.name" value="" style="width: 260px;height: 40px;margin-top: 10px;margin-left: 30px;"/><br>
+            <input type="password" name="pwd" class="in"  placeholder="  请输入密码" v-model="form.pwd" value=""  style="width: 260px;height: 40px;margin-top: 25px;margin-left: 30px;"/><br>
+        </form>
+        <input type="submit" @click="savePost" id="an" value="注册" style="width: 265px;height: 45px;margin-top: 25px;
+                                        margin-left: 30px;font-size: 20px;color: white;background-color: #3385ff;border: 0px;margin-bottom: 25px;" />
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    var options = {
+
+        el: "#zhuti",
+        data: {
+            form: {
+                name: '',
+                pwd: '',
+                cover: null,
+            },
+            previewSrc: null
+        },
+
+        methods: {
+            savePost() {
+                var formData = new FormData();
+                formData.append("name", this.form.name);
+                formData.append("pwd", this.form.pwd);
+                formData.append("cover", this.form.cover);
+
+                console.log(this.form.cover)
+
+                axios({
+                    url: 'glzc',
+                    method: 'post',
+                    data: formData
+                }).then(r=> {
+                    alert("注册成功！");
+                    window.location.href = 'http://localhost:8080/Mymvs_war_exploded/GLDL.html'
+                    // window.open('http://localhost:8080/Mymvs_war_exploded/GLDL.html')
+                }).catch(e => {
+                    alert(222)
+                });
+            },
+            filePick() {
+                this.previewSrc = URL.createObjectURL(this.$refs.x.files[0]); //通过this.$refs.x 的方式来调用前面定义变量为x的节点元素
+                this.form.cover = this.$refs.x.files[0];
+            },
+        },
+        created: function(){
+            // alert(111)
+            // window.open('http://localhost:8080/mymvs_war_exploded/Denl.html')
+        },
+
+    };
+    var vm =  new Vue(options);
+
+
+</script>
+
+</body>
+</html>

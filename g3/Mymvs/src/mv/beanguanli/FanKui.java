@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class FanKui {
 
+    private int fkid;
     private int id;
     private String name;
     private String tp;
@@ -14,13 +15,22 @@ public class FanKui {
     public FanKui() {
     }
 
-    public FanKui(int id, String name, String tp, String fk, Date time, int sf) {
+    public FanKui(int fkid, int id, String name, String tp, String fk, Date time, int sf) {
+        this.fkid = fkid;
         this.id = id;
         this.name = name;
         this.tp = tp;
         this.fk = fk;
         this.time = time;
         this.sf = sf;
+    }
+
+    public int getFkid() {
+        return fkid;
+    }
+
+    public void setFkid(int fkid) {
+        this.fkid = fkid;
     }
 
     public int getId() {

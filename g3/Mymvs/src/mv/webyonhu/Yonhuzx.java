@@ -14,7 +14,7 @@ public class Yonhuzx extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        session.setAttribute("sess", null);
+        session.setAttribute("sess2", null);
     }
 
 }

@@ -48,4 +48,32 @@ public class DeleteDao {
         }
     }
 
+    public void yhdeleteyypl(String mcid,String yhid) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "delete from misicComment where mcid = ? and yhid = ?";
+        try {
+            new QueryRunner().update(conn, sql, mcid , yhid);
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+    public void yhdeletesppl(String vcid,String yhid) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "delete from videoComment where vcid = ? and yhid = ?";
+        try {
+            new QueryRunner().update(conn, sql, vcid , yhid);
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+    public void yhdeletejg(int id) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "delete from jiangao where id = ?";
+        try {
+            new QueryRunner().update(conn, sql, id);
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+
 }

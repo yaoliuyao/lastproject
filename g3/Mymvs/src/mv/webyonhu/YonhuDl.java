@@ -28,13 +28,13 @@ public class YonhuDl extends HttpServlet {
             YonHu yonHu = new YonhuDao().dl(name,pwd);
             if(yonHu == null){
                 HttpSession session = req.getSession();
-                session.setAttribute("sess",null);
+                session.setAttribute("sess2",null);
 
                 PrintWriter writer = resp.getWriter();
                 writer.print(ResultVO.ok(sb).toJSON());
             }else if (yonHu != null){
                 HttpSession session = req.getSession();
-                session.setAttribute("sess",yonHu);
+                session.setAttribute("sess2",yonHu);
 
                 PrintWriter writer = resp.getWriter();
                 writer.print(ResultVO.ok(cg).toJSON());

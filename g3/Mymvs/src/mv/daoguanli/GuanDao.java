@@ -2,6 +2,8 @@ package mv.daoguanli;
 
 import mv.beanguanli.GuanLy;
 import mv.utils.DBHelper;
+import org.apache.commons.dbutils.DbUtils;
+import org.apache.commons.dbutils.QueryRunner;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,6 +60,17 @@ public class GuanDao {
                     return null;
                 }
             }
+        }
+    }
+
+
+    public void jiechufenhao(int id) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "update yonhu set viptime1 = 1 where id = ?";
+        try {
+            new QueryRunner().update(conn, sql, id);
+        } finally {
+            DbUtils.closeQuietly(conn);
         }
     }
 

@@ -1,8 +1,12 @@
 package mv.daoyonhu;
 
 import mv.beanguanli.GuanLy;
+import mv.beanyonhu.Jingao;
 import mv.beanyonhu.YonHu;
 import mv.utils.DBHelper;
+import org.apache.commons.dbutils.DbUtils;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -67,6 +71,58 @@ public class YonhuDao {
                     return null;
                 }
             }
+        }
+    }
+
+
+    public Jingao cxjg(int id) throws Exception {
+        String sql = "select * from jiangao where id = ? and sf = 0 order by jgid desc";
+        try (Connection connection = DBHelper.getConnection();
+             PreparedStatement pr = connection.prepareStatement(sql)) {
+            pr.setInt(1, id);
+            try (ResultSet resultSet = pr.executeQuery()){
+                if (resultSet.next()) {
+                    Jingao jingao = new Jingao();
+                    jingao.setJgid(resultSet.getInt(1));
+                    jingao.setId(resultSet.getInt(2));
+                    jingao.setmComment(resultSet.getString(3));
+                    jingao.setMtime(resultSet.getString(4));
+                    return jingao;
+                }
+                else {
+                    return null;
+                }
+            }
+        }
+    }
+
+    public int getjgshuMount(int id) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        try {
+            String sql = "select count(*) from jiangao where id = ?";
+            return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),id);
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+
+    public void bianjg(int id) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "update jiangao set sf = 1 where jgid = ?";
+        try {
+            new QueryRunner().update(conn, sql, id);
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+
+    public void femhao(int id) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "update yonhu set viptime1 = 999 where id = ?";
+        try {
+            new QueryRunner().update(conn, sql, id);
+        } finally {
+            DbUtils.closeQuietly(conn);
         }
     }
 

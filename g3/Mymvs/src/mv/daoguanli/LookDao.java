@@ -264,8 +264,8 @@ public class LookDao {
     public List<FanKui> fanKuis(int currentPage, int limit) throws Exception {
         Connection conn = DBHelper.getConnection();
         String sql = "select * from " +
-                "(select row_number() over (order by time desc) as rn, " +
-                "id, name, tp, fk, time, sf from yonhufankui) as s " +
+                "(select row_number() over (order by fkid desc) as rn, " +
+                "fkid, id, name, tp, fk, time, sf from yonhufankui) as s " +
                 "where rn between ? and ?";
         try {
             return new QueryRunner().query(

@@ -115,54 +115,66 @@ public class ZhiyuanDao {
     }
 
 
-    public int dzyy(int mid) throws Exception {
+    public void dzyy(int mid) throws Exception {
         Connection conn = DBHelper.getConnection();
+        String sql = "update misic set mlike = mlike + 1 where mid = ?";
         try {
-            String sql = "update misic set mlike = mlike + 1 where mid = ?";
-            return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),mid);
+            new QueryRunner().update(conn, sql, mid);
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+//    public int dzyy(int mid) throws Exception {
+//        Connection conn = DBHelper.getConnection();
+//        try {
+//            String sql = "update misic set mlike = mlike + 1 where mid = ?";
+//            return (int) new QueryRunner().update(conn, sql, new ScalarHandler<>(),mid);
+//        } finally {
+//            DbUtils.closeQuietly(conn);
+//        }
+//    }
+
+    public void dzsp(int vid) throws Exception {
+        Connection conn = DBHelper.getConnection();
+        String sql = "update video set vlike = vlike + 1 where vid = ?";
+        try {
+            new QueryRunner().update(conn, sql, vid);
         } finally {
             DbUtils.closeQuietly(conn);
         }
     }
 
-    public int dzsp(int vid) throws Exception {
+    public void dzgs(int pid) throws Exception {
         Connection conn = DBHelper.getConnection();
+        String sql = "update player set plike = plike + 1 where pid = ?";
         try {
-            String sql = "update video set vlike = vlike + 1 where vid = ?";
-            return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),vid);
+            new QueryRunner().update(conn, sql, pid);
         } finally {
             DbUtils.closeQuietly(conn);
         }
     }
 
-    public int dzgs(int pid) throws Exception {
+
+    public void dzyypl(int mcid) throws Exception {
         Connection conn = DBHelper.getConnection();
+        String sql = "update misicComment set mclike = mclike + 1 where mcid = ?";
         try {
-            String sql = "update player set plike = plike + 1 where pid = ?";
-            return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),pid);
+            new QueryRunner().update(conn, sql, mcid);
         } finally {
             DbUtils.closeQuietly(conn);
         }
     }
 
-    public int dzyypl(int mcid) throws Exception {
+    public void dzsppl(int vcid) throws Exception {
         Connection conn = DBHelper.getConnection();
+        String sql = "update videoComment set vclike = vclike + 1 where vcid = ?";
         try {
-            String sql = "update misicComment set mclike = mclike + 1 where mcid = ?";
-            return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),mcid);
+            new QueryRunner().update(conn, sql, vcid);
         } finally {
             DbUtils.closeQuietly(conn);
         }
     }
-    public int dzsppl(int vcid) throws Exception {
-        Connection conn = DBHelper.getConnection();
-        try {
-            String sql = "update videoComment set vclike = vclike + 1 where vcid = ?";
-            return (int) new QueryRunner().query(conn, sql, new ScalarHandler<>(),vcid);
-        } finally {
-            DbUtils.closeQuietly(conn);
-        }
-    }
+
 
 
 }

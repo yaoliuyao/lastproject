@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style type="text/css">
+        body{
+            background-image: url(tp/banner_pc.jpg);
+            background-size: 1100px 660px;
+        }
+        #logo{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            /* border: 1px solid red; */
+            width: 240px;
+        }
+        #logo img{
+            border-radius: 15px;
+        }
+        #zi{
+            /*border: 1px solid red;*/
+            width: 450px;
+            height: 260px;
+            margin-top: 240px;
+            margin-left: 140px;
+        }
+        #zi h1{
+            margin-left:50px;
+            color: white;
+            font-size: 43px;
+            opacity: 0.7;
+        }
+        #zi p{
+            color: white;
+            font-size: 27px;
+            margin-left:140px;
+        }
+        #zi p:hover{
+
+        }
+        #dl{
+            background-color: #dfdfdf;
+            opacity: 0.8px;
+            border: 1px solid gray;
+            width: 330px;
+            height: 350px;
+            position: fixed;
+            right: 300px;
+            top: 120px;
+            border-radius: 18px;
+
+            transition: right 0.8s;
+            -webkit-transition: right 0.8s;
+        }
+        #dl:hover{
+            right: 320px;
+        }
+        a{
+            color: #6f95c8;
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .in{
+            border: 1px solid skyblue;
+            border-radius: 12px;
+        }
+        .in:hover{
+            border: 1px solid #409AF8;
+            border-radius: 12px;
+        }
+        #an{                                     /* 按钮 */
+            border-radius: 10px;
+        }
+        #an:hover{
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div id="zhuti">
+
+    <div id="logo">
+        <img src="tp/timg.jpg" width="130" height="130" style="box-shadow: 5px 5px 10px white">
+    </div>
+
+    <div id="zi">
+        <h1>Mymv音乐管理系统</h1>
+        <p>引领市场 安全管理</p>
+    </div>
+
+    <div id="dl">
+        <p style="margin-left: 115px;">帐号密码登录</p>
+        <hr >
+
+        <input type="text" name="name" class="in" placeholder="  请输入用户名" v-model="name" value="" style="width: 260px;height: 40px;margin-top:40px;margin-left: 30px;"/><br>
+        <input type="password" name="pwd" class="in"  placeholder="  请输入密码" v-model="pwd" value=""  style="width: 260px;height: 40px;margin-top: 25px;margin-left: 30px;"/><br>
+        <input type="submit" @click="savePost" id="an" value="登录" style="width: 265px;height: 45px;margin-top: 25px;
+                                    margin-left: 30px;font-size: 20px;color: white;background-color: #3385ff;border: 0px;margin-bottom: 25px;" />
+        <br><a href="http://localhost:8080/Mymvs_war_exploded/GLZC.html" style="margin-left: 140px;">注册新账号</a>|
+        <a href="#">意见反馈</a>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    var options = {
+        el: "#zhuti",
+        data: {
+            name: '',
+            pwd: '',
+        },
+        methods: {
+            savePost() {
+                var rsp = new URLSearchParams();
+                rsp.append("name", this.name);
+                rsp.append("pwd", this.pwd);
+                axios({
+                    url: "gldl",
+                    method: "post",
+                    data: rsp
+                }).then(resp =>{
+                    // console.log(resp);
+                    // console.log(resp.data.data)
+                    if (resp.data.data == 0){
+                        alert("用户名或密码错误！")
+                    }else{
+                        alert("登录成功");
+                        window.location.href = 'http://localhost:8080/Mymvs_war_exploded/GLindex.html'
+                        // window.location.href = 'http://localhost:8081/#/index'
+                    }
+                });
+            },
+        },
+
+    };
+    var vm =  new Vue(options);
+
+
+</script>
+
+</body>
+</html>

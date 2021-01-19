@@ -16,6 +16,17 @@ public class Pinlunsp {
     public Pinlunsp() {
     }
 
+    public Pinlunsp(int vcid, int vid, String vComment, Date vtime, int yhid, int vclike, String yhname, String yhtx) {
+        this.vcid = vcid;
+        this.vid = vid;
+        this.vComment = vComment;
+        this.vtime = vtime;
+        this.yhid = yhid;
+        this.vclike = vclike;
+        this.yhname = yhname;
+        this.yhtx = yhtx;
+    }
+
     public int getVcid() {
         return vcid;
     }
